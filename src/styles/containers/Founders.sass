@@ -1,0 +1,237 @@
+.Founders
+  padding-top: 150px
+  &__Pugu
+    height: 230px
+    position: absolute
+    right: 0
+    animation: pugu-founders 5s infinite ease-in
+  &__Title
+    display: inline-flex
+    margin: 0 0 0 40px
+    font-family: 'Gilroy-Bold', sans-serif
+    font-size: 160px
+    font-weight: 700
+    position: relative
+  &__Garabato
+    width: 400px
+    position: absolute
+    top: calc(50% - 150px)
+    left: -70px
+    z-index: -1
+  &__Jeringa
+    width: 220px
+    position: absolute
+    left: calc(100% + 20px)
+    bottom: 80%
+  &__Arrow
+    width: 200px
+    height: fit-content
+    position: absolute
+    left: calc(100% + 20px)
+    top: 25%
+  &__Text-Container
+    width: 50%
+    margin: 80px auto 0
+    position: relative
+  &__Caption
+    font-family: 'Gilroy-Bold', sans-serif
+    font-size: 36px
+    font-weight: 700
+  &__Text
+    margin: 50px 0 70px
+    font-family: 'Gilroy-Medium', sans-serif
+    font-size: 22px
+    font-weight: 500
+    position: relative
+  &__Brain
+    width: 200px
+    position: absolute
+    top: -20px
+    right: calc(100% + 50px)
+  &__Instagram
+    width: fit-content
+    display: flex
+    align-items: center
+    color: #fff
+    font-family: 'Gilroy-LightItalic', sans-serif
+    font-size: 16px
+    font-weight: 300
+    text-decoration: unset
+    i
+      font-size: 40px
+      margin-right: 15px
+    &:hover
+      color: #ccc
+  &__Item-Container
+    margin-top: 250px
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    position: relative
+    div:nth-child(1)
+      background: #1626D8
+    div:nth-child(2)
+      // background: #303FEE
+      background: #fccb00
+    div:nth-child(3)
+      background: #FE80C0
+    div:nth-child(4)
+      background: #FC5854
+  &__Item
+    width: 100%
+    height: 200px
+    padding: 24px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-start
+  &__Item-Name
+    margin: 0
+    font-family: 'Gilroy-Bold', sans-serif
+    font-size: 50px
+    font-weight: 700
+  &__Item-Rol
+    font-family: 'Gilroy-Medium', sans-serif
+    font-size: 20px
+    font-weight: 500
+  &__Image
+    width: 200px
+    position: absolute
+    right: 0
+    bottom: calc(100% - 20px)
+    z-index: -1
+    transform: rotate(160deg)
+
+@media (max-width: 1200px)
+  .Founders
+    margin-top: 80px
+    padding-top: 300px
+    &__Pugu
+      height: 180px
+      position: absolute
+    &__Jeringa
+      width: 180px
+      left: 100%
+      bottom: 60%
+
+@media (max-width: 1024px)
+  .Founders
+    &__Pugu
+      height: 150px
+      left: 0
+      right: unset
+      transform: rotateY(180deg)
+      animation: pugu-founders-mobile 5s infinite ease-in
+    &__Title
+      font-size: 110px
+    &__Garabato
+      width: 300px
+      top: calc(50% - 110px)
+    &__Arrow
+      width: 150px
+      top: 30%
+    &__Text-Container
+      width: 75%
+    &__Caption
+      font-size: 28px
+    &__Text
+      margin: 50px 0 70px
+      font-size: 18px
+    &__Brain
+      display: none
+    &__Item-Container
+      margin-top: 200px
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+    &__Item-Name
+      font-size: 45px
+    &__Item-Rol
+      font-size: 18px
+
+@media (max-width: 768px)
+  .Founders
+    &__Title
+      margin-left: 0px
+      font-size: 90px
+    &__Garabato
+      width: 260px
+      top: calc(50% - 90px)
+      left: -60px
+    &__Jeringa
+      width: 160px
+      left: 95%
+      bottom: 55%
+    &__Arrow
+      display: none
+    &__Text-Container
+      width: 75%
+    &__Item-Container
+      margin: 200px -20px 0
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+
+@media (max-width: 575px)
+  .Founders
+    &__Title
+      font-size: 60px
+    &__Garabato
+      width: 170px
+      top: calc(50% - 70px)
+      left: -40px
+    &__Jeringa
+      width: 120px
+      left: 95%
+      bottom: 50%
+    &__Text-Container
+      width: 100%
+    &__Caption
+      font-size: 22px
+    &__Text
+      margin: 40px 0 60px
+      font-size: 16px
+    &__Item-Container
+      grid-template-columns: repeat(1, 1fr)
+      grid-template-rows: repeat(4, 1fr)
+    &__Item-Name
+      font-size: 40px
+    &__Item-Rol
+      font-size: 18px
+
+@media (max-width: 375px)
+  .Founders
+    &__Jeringa
+      width: 80px
+      left: 95%
+      bottom: 60%
+
+@media (max-width: 375px)
+  .Founders
+    &__Jeringa
+      left: 90%
+
+@keyframes pugu-founders
+  0%
+    transform: translateX(0)
+  20%
+    transform: translateX(0)
+  40%
+    transform: translateX(100%)
+  60%
+    transform: translateX(100%)
+  80%
+    transform: translateX(0)
+  100%
+    transform: translateX(0)
+
+@keyframes pugu-founders-mobile
+  0%
+    transform: translateX(0) rotateY(180deg)
+  20%
+    transform: translateX(0) rotateY(180deg)
+  40%
+    transform: translateX(-100%) rotateY(180deg)
+  60%
+    transform: translateX(-100%) rotateY(180deg)
+  80%
+    transform: translateX(0) rotateY(180deg)
+  100%
+    transform: translateX(0) rotateY(180deg)

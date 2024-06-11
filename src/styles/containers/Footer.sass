@@ -1,0 +1,150 @@
+.Footer
+  height: 900px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: relative
+  overflow: hidden
+  &__Title
+    width: 100%
+    text-align: center
+    position: relative
+    font-family: 'Poppins', sans-serif
+    font-size: 50px
+    font-weight: 600
+  &__Pugu
+    height: 400px
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: -1
+    animation: pugu-footer 5s infinite ease-in
+  &__Sneakers-Container
+    position: absolute
+    right: 15%
+    bottom: 75%
+  &__Sneakers
+    width: 280px
+  &__Arrow
+    width: 140px
+    position: absolute
+    right: 0
+  &__ExtraText
+    min-width: fit-content
+    margin-left: -10px
+    position: absolute
+    top: 20px
+    font-family: 'Gilroy-LightItalic', sans-serif,
+    font-size: 16px
+    font-weight: 300
+
+.Linkchar-Container
+  padding: 16px 20px
+  background: #1F2EE0
+  display: flex
+  justify-content: center
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  color: rgba(255, 255, 255, .7)
+  z-index: 100
+
+.Linkchar
+  margin-left: 5px
+  color: white
+  font-weight: 600
+  text-decoration: unset
+  &:hover
+    color: #FC5854
+
+
+@media (max-width: 1024px)
+  .Footer
+    &__Title
+      margin-top: 0
+      font-size: 36px
+    &__Pugu
+      height: 300px
+      left: unset
+    &__Sneakers-Container
+      right: 25%
+      bottom: 150%
+    &__Sneakers
+      width: 200px
+    &__Arrow
+      width: 120px
+      right: -20px
+    &__ExtraText
+      margin-left: 10px
+
+@media (max-width: 768px)
+  .Footer
+    &__Title
+      margin-top: 0
+      font-size: 30px
+    &__Pugu
+      height: 280px
+    &__Sneakers-Container
+      right: 10%
+      bottom: 150%
+    &__Sneakers
+      width: 180px
+    &__Arrow
+      width: 100px
+      right: -10px
+    &__ExtraText
+      min-width: unset
+      max-width: 100px
+      top: 0
+      text-align: left
+  .Linkchar
+    span
+      display: none
+
+@media (max-width: 575px)
+  .Footer
+    height: 800px
+    &__Title
+      margin-top: 0
+      font-size: 26px
+    &__Pugu
+      height: 240px
+    &__Sneakers-Container
+      right: 30%
+      bottom: 150%
+    &__Sneakers
+      width: 150px
+    &__Arrow
+      width: 80px
+    &__ExtraText
+      margin: 0
+
+// @keyframes pugu-footer
+//   0%
+//     transform: translateY(100%)
+//   10%
+//     transform: translateY(20%)
+//   30%
+//     transform: translateY(100%)
+//   40%
+//     transform: translateY(0)
+//   90%
+//     transform: translateY(0)
+//   100%
+//     transform: translateY(100%)
+
+@keyframes pugu-footer
+  0%
+    transform: translateY(0)
+  20%
+    transform: translateY(0)
+  40%
+    transform: translateY(100%)
+  60%
+    transform: translateY(100%)
+  80%
+    transform: translateY(0)
+  100%
+    transform: translateY(0)

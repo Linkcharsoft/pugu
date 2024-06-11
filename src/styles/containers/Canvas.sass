@@ -1,0 +1,53 @@
+.Canvas
+  width: 100%
+  height: 100vh
+  margin: 0
+  padding: 0
+
+.CanvasContainer
+  width: 100%
+  height: 100%
+  position: relative
+  margin: 0
+  padding: 0
+  display: flex
+  justify-content: center
+  align-items: flex-end
+  &__Title
+    margin: 0 0 18.5vh
+    position: absolute
+    font-family: 'Poppins', sans-serif
+    font-weight: 700
+    font-size: 200px
+    color: white
+
+
+@media (max-width: 1600px)
+  .CanvasContainer__Title
+    font-size: 175px
+
+@media (max-width: 1440px)
+  .CanvasContainer__Title
+    font-size: 150px
+
+@media (max-width: 1200px)
+  .CanvasContainer__Title
+    font-size: 125px
+
+@media (max-width: 1024px)
+  .CanvasContainer__Title
+    font-size: 100px
+
+@media (max-width: 768px)
+  .CanvasContainer
+    display: none
+  .CanvasContainer__Title
+    font-size: 80px
+
+@media (max-width: 575px)
+  .CanvasContainer__Title
+    font-size: 60px
+
+@media (max-width: 425px)
+  .CanvasContainer__Title
+    font-size: 50px

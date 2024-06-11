@@ -1,0 +1,109 @@
+.Mint
+  display: flex
+  justify-content: space-evenly
+  position: relative
+  &__Title-Container
+    width: 50%
+    margin-bottom: 60px
+    position: relative
+    .Mint__ExtraText
+      position: absolute
+      top: calc(100% + 20px)
+      left: 0
+      text-align: right
+      font-family: 'Gilroy-LightItalic', sans-serif,
+      font-size: 16px
+      font-weight: 300
+  &__Title
+    max-width: 500px
+    width: 100%
+  &__Aside
+    margin-top: 100px
+    margin-right: 120px
+    display: flex
+    flex-direction: column
+    align-items: center
+    align-self: flex-start
+    justify-content: center
+    position: relative
+  &__Aside-Items
+    margin-bottom: 120px
+    display: grid
+    grid-template-columns: auto 1fr
+    grid-template-rows: repeat(3, auto)
+    gap: 70px 40px
+    align-items: center
+    span:nth-child(2)::after, span:nth-child(4)::after
+      content: ''
+      width: 100vw
+      height: 1px
+      background: rgba(255, 255, 255, 0.5)
+      position: absolute
+      left: -70px
+      bottom: -35px
+  &__Aside-Title
+    margin: unset
+    justify-self: flex-end
+    font-family: 'Gilroy-Light', sans-serif
+    font-weight: 300
+    font-size: 30px
+    line-height: 26px
+  &__Aside-Value
+    width: fit-content
+    position: relative
+    font-family: 'Gilroy-Semibold', sans-serif
+    font-weight: 600
+    font-size: 30px
+    line-height: 26px
+  &__Arrow-Container
+    width: max-content
+    display: flex
+    position: absolute
+    top: 0
+    left: 100%
+    .Mint__ExtraText
+      margin: 10px 0 0
+      position: static
+      text-align: left
+      font-family: 'Gilroy-LightItalic', sans-serif,
+      font-size: 16px
+      font-weight: 300
+      &::after
+        content: unset !important
+  &__Arrow
+    width: 90px
+    height: fit-content
+  &__Garabato
+    width: 110%
+    position: absolute
+    top: -10%
+    left: 0
+
+@media (max-width: 1024px)
+  .Mint
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+    position: relative
+    &__Title-Container
+      width: 75%
+      display: flex
+      justify-content: center
+    &__Aside
+      align-self: unset
+      margin-right: 0
+    &__Aside-Title
+      font-size: 26px
+    &__Aside-Value
+      font-size: 26px
+    &__Arrow-Container
+      display: none
+
+@media (max-width: 575px)
+  .Mint
+    &__Title-Container
+      width: 90%
+    &__Aside-Title
+      font-size: 22px
+    &__Aside-Value
+      font-size: 22px

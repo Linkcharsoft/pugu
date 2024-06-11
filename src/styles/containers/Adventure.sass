@@ -1,0 +1,142 @@
+.Adventure
+  padding: 300px 0 200px
+  display: grid
+  grid-template-rows: 1fr
+  grid-template-columns: 1fr 2fr auto
+  &__Text-Left-Container
+    position: relative
+  &__Viking-Container
+    position: absolute
+    bottom: 100%
+    left: -100px
+    .Adventure__ExtraText
+      min-width: fit-content
+      margin: 0
+      position: absolute
+      top: -5px
+      left: 150%
+  &__Viking-Image
+    width: 220px
+    animation: float 5s infinite linear
+  &__Viking-Arrow
+    width: 150px
+    position: absolute
+    top: -20px
+    left: 80%
+  &__Text-Left
+    text-align: left
+    line-height: 36px
+    font-size: 36px
+    font-weight: 500
+  &__Title-Container
+    margin-bottom: 50px
+    margin-left: 50px
+    display: flex
+    align-items: flex-end
+    position: relative
+  &__Garabato
+    width: 380px
+    position: absolute
+    top: calc(50% - 140px)
+    left: -70px
+    z-index: -1
+  &__Title
+    margin: 0
+    font-size: 100px
+    font-weight: 700
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.2)
+  &__ExtraText
+    margin: 0 0 30px 20px
+    font-family: 'Gilroy-LightItalic', sans-serif,
+    font-size: 16px
+    font-weight: 300
+  &__Text
+    margin-left: 50px
+    max-width: 80%
+    font-size: 22px
+    font-weight: 400
+  &__Pugu
+    height: 320px
+    justify-self: center
+    align-self: center
+
+@media (max-width: 1600px)
+  .Adventure
+    &__Viking-Container
+      left: -10px
+    &__Pugu
+      height: 260px
+
+@media (max-width: 1200px)
+  .Adventure
+    &__Viking-Image
+      width: 180px
+
+@media (max-width: 1024px)
+  .Adventure
+    padding: 200px 0 100px
+    grid-template-rows: repeat(3, auto)
+    grid-template-columns: 1fr
+    &__Text-Left-Container
+      margin-bottom: 120px
+    &__Text-Left
+      width: 75%
+      margin: 0 0 0 auto
+      line-height: 28px
+      font-size: 28px
+    &__Garabato
+      width: 320px
+      position: absolute
+      top: calc(50% - 130px)
+      left: -10px
+      z-index: -1
+    &__Title-Container
+      margin-bottom: 40px
+      margin-left: 0
+      .Adventure__ExtraText
+        display: none
+    &__Title
+      margin: 0 0 20px 0px
+      font-size: 80px
+    &__Text
+      max-width: 80%
+      margin-left: 0
+      font-size: 18px
+    &__Pugu
+      height: 350px
+      justify-self: center
+      align-self: flex-end
+
+@media (max-width: 575px)
+  .Adventure
+    &__Viking-Container
+      .Adventure__ExtraText
+        top: -5px
+        left: 135%
+    &__Viking-Image
+      width: 140px
+    &__Viking-Arrow
+      width: 110px
+      position: absolute
+      top: -15px
+      left: 65%
+    &__Text-Left
+      line-height: 18px
+      font-size: 18px
+    &__Title-Container
+      margin-bottom: 0
+    &__Garabato
+      width: 210px
+      position: absolute
+      top: calc(50% - 90px)
+      left: -10px
+      z-index: -1
+    &__Title
+      // margin-left: 30px
+      font-size: 55px
+    &__Text
+      max-width: 90%
+      font-size: 16px
+    &__Pugu
+      width: 100%
+      height: unset
